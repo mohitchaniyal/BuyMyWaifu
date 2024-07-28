@@ -1,0 +1,29 @@
+{% extends 'core/base.html'%}
+{% load static %}
+{% block content %}
+<!-- header -->
+<header class="px-6 py-10 lg:py-20 lg:pb-10 bg-purple-500">
+    <!-- header container -->
+    <div class="max-w-3xl mx-auto text-center">
+        <p class="mb-2 text-3xl lg:text-5xl text-white">
+            Welcome To BuyMyWaifu
+        </p>
+        <p class="mb-10 text-white">
+            Find The Waifu You See In Your Dreams
+        </p>
+        <a href="" class="inline-block px-8 py-2 rounded-xl bg-white text-purple-500 hover:bg-gray-200">
+            Buy Now
+        </a>
+    </div>
+    <!-- header container end -->
+</header>
+<!-- header end -->
+<div class="max-w-6xl mx-auto py-2 px-6 xl-:px-0">
+    <div class="product flex items-center flex-wrap">
+        <!-- {{waifus}} -->
+        {%for waifu in waifus %}
+        {% include 'partials/product_tile.html' %}
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}
